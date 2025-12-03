@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
 import WeeklySummary from "./WeeklySummary";
 import StreakCounter from "./StreakCounter";
-
-const API_BASE = "http://localhost:5000";
+const API_BASE = import.meta.env.VITE_API_BASE || "http://localhost:5000";
 
 function Habits({ onLogout }) {
   const [habits, setHabits] = useState([]);
